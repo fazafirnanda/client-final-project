@@ -45,6 +45,10 @@ const DetailCourse = () => {
                             
                              Vel laborum animi in dignissimos id tempora assumenda. Nobis libero suscipit tempora praesentium iusto possimus corporis repudiandae nihil, pariatur dolore recusandae minima architecto sunt quia delectus esse? Nulla, hic, est corrupti repellat, quaerat aut minus possimus beatae architecto commodi ipsum odit?</p>
                     </div>
+                    <div>
+                        <h1 className="text-2xl font-bold mb-2">Review</h1>
+
+                    </div>
                 </div>
                 <div className="w-2/6 -translate-y-72 bg-white shadow-lg h-[30rem]">
                     <div className="w-full">

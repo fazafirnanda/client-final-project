@@ -1,13 +1,10 @@
 import { useEffect } from "react"
 import { useState } from "react"
-import Review from "../../components/Review"
-import Calendar from "../../components/TeacherSide/Calendar"
-import Course from "../../components/TeacherSide/Course"
-import "../../index.css"
+import "../index.css"
+import Course from "../components/TeacherSide/Course"
 
 const DashboardUser = () => {
     const [isActive, setisActive] = useState("listCourse")
-    const [activeForm, setActiveForm] = useState(false)
 
     const renderSection = () => {
         if(isActive == "listCourse"){
@@ -22,22 +19,6 @@ const DashboardUser = () => {
                 hagsdjhgs
                 </div>
             )
-        }else if(isActive == "Reviews"){
-            return (
-                <div className="px-44 py-16" >
-                    <div>
-                        <Review/>
-                    </div>
-                </div>
-            )
-        }else if(isActive == "Schedule"){
-            return (
-                <div className="px-44 py-16">
-                    <div>
-                        <Calendar/>
-                    </div>
-                </div>
-            )
         }
     }
     return (
@@ -47,12 +28,7 @@ const DashboardUser = () => {
                 <div className="flex justify-between mt-7">
                     <div className="w-2/3 text-white flex gap-x-9 helvetica-bold translate-y-4 bg-[#292b2f]">
                         <button className={isActive !== "listCourse" ? "text-gray-400 border-b-8 pb-3 border-b-[#292b2f]" : "border-b-8 pb-3 border-b-white"} onClick={() => setisActive("listCourse")}>Wish List</button>
-                        <button className={isActive !== "Students" ? "text-gray-400 border-b-8 pb-3 border-b-[#292b2f]" : "border-b-8 pb-3 border-b-white"} onClick={() => setisActive("Students")}>Students</button>
-                        <button className={isActive !== "Reviews" ? "text-gray-400 border-b-8 pb-3 border-b-[#292b2f]" : "border-b-8 pb-3 border-b-white"} onClick={() => setisActive("Reviews")}>Reviews</button>
-                        <button className={isActive !== "Schedule" ? "text-gray-400 border-b-8 pb-3 border-b-[#292b2f]" : "border-b-8 pb-3 border-b-white"} onClick={() => setisActive("Schedule")}>Schedule</button>
-                    </div>
-                    <div className="flex items-center text-white helvetica-bold gap-x-4 translate-y-2">
-                        <button onClick={() => setisActive(!activeForm)}>Add Course</button>
+                        <button className={isActive !== "Students" ? "text-gray-400 border-b-8 pb-3 border-b-[#292b2f]" : "border-b-8 pb-3 border-b-white"} onClick={() => setisActive("Students")}>Instructor</button>
                     </div>
                 </div>
             </div>

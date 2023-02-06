@@ -12,6 +12,8 @@ import Profile from "./views/Profile"
 import Home from "./views/Home"
 import MyProfile from "./views/MyProfile"
 import DetailCourse from "./views/DetailsCourse"
+import DashboardUser from "./views/DashboardUser"
+
 
 
 const router = createBrowserRouter([
@@ -53,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "/course/detail/:id",
         element: <DetailCourse />,
+      },
+      {
+        path: "/dashboard/user/:id",
+        element: <DashboardUser />,
       }
     ],
   },

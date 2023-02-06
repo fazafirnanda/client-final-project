@@ -14,12 +14,12 @@ const Navbar = () => {
             <div className="flex gap-x-5 text-sm">
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/course">Course</NavLink>
-                <NavLink to="/course">Dashboard</NavLink>
+                <NavLink to="/dashboard/user/2">Dashboard</NavLink>
                 <NavLink to="/instructor">Teach on Privator</NavLink>
             </div>
             <div className="flex gap-x-5 items-center">
                 <div>
-                    <NavLink to="/profile/user">
+                    <NavLink to="/edit-profile">
                         <img src={female} alt="" className="w-9" />
                     </NavLink>
                 </div>
