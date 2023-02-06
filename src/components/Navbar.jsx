@@ -7,14 +7,15 @@ const Navbar = () => {
     return (
         <div className="px-16 py-3 flex justify-between items-center shadow-md sticky top-0 z-20 bg-white">
             <div className="flex gap-x-4 items-center">
-                <NavLink to="/">
+                <NavLink to="/welcome">
                     <img src={Privator} alt="" className="h-12"/>
                 </NavLink>
             </div>
-            <div className="flex gap-x-5">
+            <div className="flex gap-x-5 text-sm">
+                <NavLink to="/">Home</NavLink>
                 <NavLink to="/course">Course</NavLink>
-                <NavLink to="/course">My list</NavLink>
-                <NavLink to="/course">Cart</NavLink>
+                <NavLink to="/course">Dashboard</NavLink>
+                <NavLink to="/instructor">Teach on Privator</NavLink>
             </div>
             <div className="flex gap-x-5 items-center">
                 <div>

@@ -1,6 +1,5 @@
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
-import Home from "./views/Welcome"
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import Template from "./views/Template"
 import NotFound from "./views/Notfound"
@@ -10,7 +9,9 @@ import Welcome from "./views/Welcome"
 import Login from "./views/Login"
 import Register from "./views/Register"
 import Profile from "./views/Profile"
-
+import Home from "./views/Home"
+import MyProfile from "./views/MyProfile"
+import DetailCourse from "./views/DetailsCourse"
 
 
 const router = createBrowserRouter([
@@ -18,11 +19,11 @@ const router = createBrowserRouter([
     element: <Template/>,
     children: [
       {
-        path : "/",
+        path : "/welcome",
         element : <Welcome />,
       },
       {
-        path : "/Home",
+        path : "/",
         element : <Home />,
       },
       {
@@ -34,12 +35,24 @@ const router = createBrowserRouter([
         element : <Dashboard/>
       },
       {
+        path : "/user/dashboard/:id",
+        element : <Dashboard/>
+      },
+      {
           path: "*",
           element: <NotFound />,
       },
       {
         path: "/profile/user",
         element: <Profile />,
+      },
+      {
+        path: "/edit-profile/",
+        element: <MyProfile />,
+      },
+      {
+        path: "/course/detail/:id",
+        element: <DetailCourse />,
       }
     ],
   },

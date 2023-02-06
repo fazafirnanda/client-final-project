@@ -31,6 +31,11 @@
   font-family: "Helvetica Neue", "Helvetica", "sans-serif";
 }
 
+.helvetica-bold {
+  font-family: "Helvetica Neue", "Helvetica", "sans-serif";
+  font-weight: 700;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
